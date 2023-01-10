@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;1,8..144,700&family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js" defer></script>
+    <title>Library</title>
+    <template id="bookTemplate">
+      <section data-id="" class="book flex">
+        <section class="book__data flex">
+          <h3 class="book__title">The Cat in the Hat</h3>
+          <p class="book__author">By: Lorem ipsum</p>
+          <p class="book__pages">Pages: 345</p>
+        </section>
+        <menu class="book__menu flex">
+          <label>
+            <input type="checkbox" name="completed" />
+            Read
+          </label>
+          <button>
+            <i class="fa-sharp fa-solid fa-trash"></i>
+          </button>
+        </menu>
+      </section>
+    </template>
+  </head>
+  <body>
+    <header class="header flex">
+      <section class="container flex">
+        <h1 class="header__title">Bookshelf</h1>
+        <button class="btn btn--open">
+          <i class="fa-solid fa-circle-plus"></i>
+          Add Book
+        </button>
+      </section>
+      <dialog class="modal" id="modal">
+        <form action="" method="dialog">
+          <h1>Add book</h1>
+          <label for="author">Author</label>
+          <input type="text" id="author" />
+        </form>
+        <button class="btn btn--close">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </dialog>
+    </header>
+    <main class="main">
+      <section>
+        <h2>Current Status</h2>
+        <p>Total Books: 30</p>
+        <p>Books Completed: 10</p>
+        <p>completion rate: 33.33%</p>
+        <p>Pages Read: 5000</p>
+      </section>
+      <section class="bookshelf flex"></section>
+    </main>
+  </body>
+</html>

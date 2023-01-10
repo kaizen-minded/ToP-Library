@@ -1,0 +1,70 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-inline-size: 80rem;
+  flex: 1;
+}
+.header {
+  background-color: blue;
+  justify-content: center;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.header > section {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+.book {
+  --gap: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  inline-size: clamp(200px, 23vw, 220px);
+  aspect-ratio: 2/3;
+  border: 5px solid red;
+  background-color: #333;
+  color: white;
+  border-radius: 4%;
+  overflow: hidden;
+}
+
+.book__data {
+  --gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  /* flex-basis: 80%; */
+}
+.book__title {
+  font-size: 2rem;
+  line-height: 1;
+  word-wrap: break-word;
+  /* margin-block-end: 1rem; */
+}
+
+.book__menu {
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  transform: translateY(100%);
+  transition: all 300ms ease-in;
+  opacity: 0;
+}
+
+.book:hover .book__menu {
+  opacity: 1;
+  transform: translateY(0);
+}
